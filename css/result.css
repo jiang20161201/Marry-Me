@@ -1,0 +1,494 @@
+@charset "UTF-8";
+
+/* 边距初始化 */
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+aside,
+fieldset,
+legend,
+img,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+del {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+h2,
+h2 a {
+    margin-bottom: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+
+/*各浏览器显示不同，去掉边框等默认样式*/
+
+img,
+input,
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul,
+ol,
+dl {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "Microsoft YaHei", "SimSun", "sans-serif";
+}
+
+select,
+input,
+textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/*防止拖动 影响布局*/
+
+textarea {
+    resize: none;
+}
+
+
+/*去掉行内替换元素空白缝隙*/
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 16px/150% Arial, Verdana, "Microsoft YaHei", "SimSun", "sans-serif";
+    color: #666;
+    background: #fff;
+}
+
+
+/*清除浮动*/
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s,
+i,
+em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.w {
+    /*版心 提取 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.hide {
+    display: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.re {
+    position: relative;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+
+/*导航栏开始*/
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 54px;
+    background-color: #606060;
+    text-align: center;
+    line-height: 52px;
+    z-index: 99999999;
+}
+
+header .logo {
+    float: left;
+    height: 40px;
+    width: 271px;
+    background: url("../images/logo.png") no-repeat;
+    text-indent: -20000px;
+    margin-left: 45px;
+    margin-top: 7px;
+}
+
+header nav {
+    float: left;
+    margin-left: 18px;
+}
+
+header nav li {
+    float: left;
+}
+
+nav li a {
+    color: #E5E5E5;
+    height: 54px;
+    width: 85px;
+    text-align: center;
+    display: inline-block;
+    font-family: "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.current-col {
+    background-color: #D51413;
+}
+
+
+/*nav li a:hover{*/
+
+
+/*background-color: #D51413;*/
+
+
+/*}*/
+
+nav li dl {
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    z-index: 100;
+}
+
+nav dl a {
+    color: #E5E5E5;
+    height: 54px;
+    width: 85px;
+    text-align: center;
+    float: left;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    background-color: rgba(96, 96, 96, .9);
+}
+
+
+/*导航栏结束*/
+
+
+/*返回顶部开始*/
+
+.actGotop {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    z-index: 100;
+}
+
+.actGotop a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: url(../images/top.png) top;
+    outline: none;
+}
+
+.actGotop a:hover {
+    width: 50px;
+    height: 50px;
+    background: url(../images/top.png) bottom;
+    outline: none;
+}
+
+
+/*返回顶部结束*/
+
+body,
+.picNav,
+.wrap {
+    background-color: oldlace;
+}
+
+#content ul li {
+    margin-right: 10px;
+    width: 225px;
+    height: 132px;
+    float: left;
+}
+
+#content ul li:last-child {
+    margin-right: 0;
+}
+
+#content ul li a {
+    display: block;
+    height: 180px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    position: relative;
+}
+
+#content ul li a > div {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -ms-transition: .8s ease-in-out;
+    position: absolute;
+}
+
+#content ul li a div:first-child {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: perspective(500px) rotateY(0);
+    z-index: 2;
+}
+
+#content ul li a:hover div:first-child {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: perspective(500px) rotateY(-180deg);
+}
+
+#content ul li a div:last-child {
+    z-index: 1;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: perspective(500px) rotateY(180deg);
+}
+
+#content ul li a:hover div:last-child {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: perspective(500px) rotateY(0);
+}
+
+.waterfallTop {
+    height: 650px;
+}
+
+.wrap {
+    position: relative;
+}
+
+.box {
+    padding: 15px 0 0 15px;
+    float: left;
+    width: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.m-right img,
+.m-left img,
+#btns img,
+.picNav img,
+.box .pic {
+    height: auto;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    overflow: hidden;
+    position: relative;
+}
+
+.box .pic img {
+    width: 100%;
+}
+
+.face {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-indent: 2em;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.face .left {
+    height: 100%;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: -300px;
+    top: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    z-index: 88;
+}
+
+.face .right {
+    height: 100%;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    right: -300px;
+    top: 0;
+    z-index: 88;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.face p {
+    margin-top: 50px;
+    text-align: left;
+    color: white;
+    width: 100%;
+    padding: 0px 15px;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    z-index: 999999;
+    position: absolute;
+    left: 0;
+    top: -200px;
+}
+
+.box .pic:hover .face .left {
+    left: 0px;
+}
+
+.box .pic:hover .face p {
+    top: 0px;
+}
+
+.box .pic:hover .face .right {
+    right: 0px;
+}
+
+.picNav {
+    margin-bottom: 30px;
+}
+
+.picNav ul {
+    margin-left: 102px;
+    /*margin: 15px auto;*/
+    margin-bottom: 15px;
+}
+
+.picNav img {
+    float: left;
+    width: 220px;
+    margin-right: 15px;
+}
